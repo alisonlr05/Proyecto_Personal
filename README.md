@@ -1,6 +1,15 @@
 # Portafolio_Personal
 
-This template should help get you started developing with Vue 3 in Vite.
+**Curso:** IF7102 Multimedios | I Ciclo 2026 | UCR  
+**Opción:** Opción 1 — Portfolio Multimedia Personal  
+**Framework elegido:** Vue 3  
+**Estudiante:** Alison Sofía López Reyes  
+
+## Framework
+
+**Vue 3**   
+Elegido por su sintaxis cercana a HTML/CSS/JS tradicional y su
+documentación oficial disponible en español.
 
 ## Recommended IDE Setup
 
