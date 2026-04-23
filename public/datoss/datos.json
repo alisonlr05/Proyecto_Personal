@@ -1,0 +1,11 @@
+{
+  "perfil": {
+    "nombreCompleto": "Alison Sofía López Reyes",
+    "titulo": "Estudiante de Informática Empresarial",
+    "universidad": "Universidad de Costa Rica",
+    "descripcion": "Estudiante de cuarto año de Informática Empresarial en la Universidad de Costa Rica.",
+    "foto": "/images/perfil.jpg",
+    "audio": "/audio/presentacion.mp3",
+    "video": "/video/intro.mp4"
+  }
+}

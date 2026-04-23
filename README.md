@@ -1,8 +1,7 @@
-# Portafolio_Personal
+# Proyecto_Personal
 
 **Curso:** IF7102 Multimedios | I Ciclo 2026 | UCR  
-**Opción:** Opción 1 — Portfolio Multimedia Personal  
-**Framework elegido:** Vue 3  
+**Opción:** Opción 1 — Portafolio Multimedia Personal    
 **Estudiante:** Alison Sofía López Reyes  
 
 ## Framework
