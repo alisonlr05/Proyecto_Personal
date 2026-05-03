@@ -8,7 +8,7 @@ const datos    = ref(null)
 const cargando = ref(true)
 
 onMounted(async () => {
-  const respuesta = await fetch('/datoss/datos.json')
+  const respuesta = await fetch('/data/datos.json')
   datos.value     = await respuesta.json()
   cargando.value  = false
 })
