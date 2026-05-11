@@ -1,56 +1,85 @@
 <script setup>
-// Recibe los datos del perfil desde App.vue
 defineProps({
   nombre: String,
 })
 </script>
 
 <template>
-  <header>
-    <div class="header-texto">
-      <h1>{{ nombre }}</h1>
+  <header class="header">
+    <div class="header__logo">
+      <span class="header__icono">✦</span>
+      <span>Portfolio</span>
     </div>
 
-    <nav>
-      <a href="#about">Sobre mí</a>
+    <nav class="header__nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre-mi">Sobre Mí</a>
       <a href="#skills">Skills</a>
-      <a href="#galeria">Proyectos</a>
+      <a href="#proyectos">Proyectos</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
 </template>
 
 <style scoped>
-header {
-  background-color: #0A0908;
-  padding: 1.5rem 3rem;
-  border-bottom: 1px solid #2a2a3a;
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: space-between;
+  padding: 1.2rem 4rem;
+  background-color: #f8f5f2;
+  border-bottom: 1px solid rgba(71, 16, 16, 0.08);
 }
 
-h1 {
-  font-size: 1.4rem;
-  color: #F2F4F3;
-  margin-bottom: 0.2rem;
-}
-
-
-nav {
+.header__logo {
   display: flex;
-  gap: 2.15rem;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #471010;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
 }
 
-nav a {
-  color: #A9927D;
+.header__icono {
+  color: #6c533d;
+  font-size: 1rem;
+}
+
+.header__nav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.header__nav a {
   text-decoration: none;
-  font-size: 0.875rem;
+  color: #471010;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  position: relative;
+  transition: color 0.2s;
 }
 
-nav a:hover {
-  color: #4f7fff;
+.header__nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #6c533d;
+  transition: width 0.25s;
+}
+
+.header__nav a:hover {
+  color: #6c533d;
+}
+
+.header__nav a:hover::after {
+  width: 100%;
 }
 </style>
