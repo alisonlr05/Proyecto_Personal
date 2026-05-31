@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue'
 import Header from './componentes/Header.vue'
 import HeroSection from './componentes/HeroSection.vue'
 import About  from './componentes/About.vue'
+import Skills from './componentes/Skills.vue'
 
 const datos    = ref(null)
 const cargando = ref(true)
@@ -30,14 +31,16 @@ onMounted(async () => {
         :nombre="datos.perfil.nombreCompleto"
         :titulo="datos.perfil.titulo"
         :universidad="datos.perfil.universidad"
-        :video="datos.perfil.video"
       />
 
       <About
         :descripcion="datos.perfil.descripcion"
         :foto="datos.perfil.foto"
         :audio="datos.perfil.audio"
+        :video="datos.perfil.video"
       />
+
+      <Skills :habilidades="datos.habilidades" />
     </main>
 
   </div>

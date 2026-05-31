@@ -7,5 +7,15 @@
     "foto": "/imagenes/perfil.jpg",
     "audio": "/audio/presentacion.mp3",
     "video": "/video/intro.mp4"
-  }
+  },
+
+  "habilidades": [
+  { "nombre": "Java",       "categoria": "Lenguajes de programación" },
+  { "nombre": "PHP",        "categoria": "Lenguajes de programación" },
+  { "nombre": "C#",         "categoria": "Lenguajes de programación" },
+  { "nombre": "JavaScript", "categoria": "Lenguajes de programación" },
+  { "nombre": "HTML5",      "categoria": "Desarrollo web" },
+  { "nombre": "CSS3",       "categoria": "Desarrollo web" },
+  { "nombre": "GitHub",     "categoria": "Herramientas" }
+]
 }
