@@ -28,7 +28,6 @@ defineProps({
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f8f5f2;
   padding: 8rem 2rem 4rem;
   text-align: center;
 }

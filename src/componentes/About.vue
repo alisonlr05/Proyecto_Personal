@@ -43,7 +43,6 @@ defineProps({
 
 <style scoped>
 .about {
-  background-color: #f8f5f2;
   padding: 5rem 4rem;
 }
 

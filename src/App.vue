@@ -1,32 +1,42 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import Header from './componentes/Header.vue'
+import { ref, onMounted, watch } from 'vue'
+import Header    from './componentes/Header.vue'
 import HeroSection from './componentes/HeroSection.vue'
-import About  from './componentes/About.vue'
-import Skills from './componentes/Skills.vue'
+import About     from './componentes/About.vue'
+import Skills    from './componentes/Skills.vue'
+import Proyectos from './componentes/Proyectos.vue'
+import Contacto  from './componentes/Contacto.vue'
 
-const datos    = ref(null)
-const cargando = ref(true)
+const datos      = ref(null)
+const cargando   = ref(true)
+const temaOscuro = ref(false)
 
 onMounted(async () => {
   const respuesta = await fetch('/data/datos.json')
   datos.value     = await respuesta.json()
   cargando.value  = false
 })
+
+watch(temaOscuro, (oscuro) => {
+  document.body.classList.toggle('tema-oscuro', oscuro)
+})
+
+function toggleTema() {
+  temaOscuro.value = !temaOscuro.value
+}
 </script>
 
 <template>
   <p v-if="cargando">Cargando...</p>
 
   <div v-else-if="datos">
-
-    <!-- datos.perfil es el objeto "perfil" del JSON -->
     <Header
       :nombre="datos.perfil.nombreCompleto"
+      :temaOscuro="temaOscuro"
+      @toggleTema="toggleTema"
     />
 
     <main>
-
       <HeroSection
         :nombre="datos.perfil.nombreCompleto"
         :titulo="datos.perfil.titulo"
@@ -41,8 +51,11 @@ onMounted(async () => {
       />
 
       <Skills :habilidades="datos.habilidades" />
-    </main>
 
+      <Proyectos :proyectos="datos.proyectos" />
+
+      <Contacto :contacto="datos.contacto" />
+    </main>
   </div>
 </template>
 
@@ -51,11 +64,17 @@ onMounted(async () => {
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html  { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 
-body  {
+body {
   font-family: 'DM Sans', sans-serif;
-  background-color: #0A0908;
-  color: #c8cedf;
+  background-color: #efeae6;
+  color: #471010;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.tema-oscuro {
+  background-color: #1a1612;
+  color: #e8e0d8;
 }
 </style>

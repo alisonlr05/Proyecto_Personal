@@ -1,7 +1,13 @@
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
+import { Sun, Moon } from 'lucide-vue-next'
 
-defineProps({ nombre: String })
+const props = defineProps({
+  nombre:     String,
+  temaOscuro: Boolean,
+})
+
+defineEmits(['toggleTema'])
 
 const activo    = ref('inicio')
 const burbujaEl = ref(null)
@@ -66,7 +72,7 @@ onMounted(() => {
   <header class="header">
     <div class="header__logo">
       <span class="header__icono">✦</span>
-      <span>Portfolio</span>
+      <span>Portfolio Personal</span>
     </div>
 
     <nav class="header__nav">
@@ -83,6 +89,16 @@ onMounted(() => {
         <span class="nav__label">{{ s.label }}</span>
       </button>
     </nav>
+
+    <!-- Toggle tema -->
+    <button class="toggle__tema" @click="$emit('toggleTema')">
+      <span class="toggle__pista" :class="{ 'toggle__pista--oscuro': temaOscuro }">
+        <span class="toggle__circulo" :class="{ 'toggle__circulo--oscuro': temaOscuro }">
+          <Sun v-if="!temaOscuro" :size="14" color="#6c533d" />
+          <Moon v-else            :size="14" color="#f8f5f2" />
+        </span>
+      </span>
+    </button>
   </header>
 </template>
 
@@ -95,8 +111,9 @@ onMounted(() => {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 4rem;
-  background-color: #f8f5f2;
+  background-color: #e0dcd8;
   border-bottom: 1px solid rgba(71, 16, 16, 0.08);
+  transition: background-color 0.3s ease;
 }
 
 .header__logo {
@@ -108,6 +125,7 @@ onMounted(() => {
   font-size: 1rem;
   letter-spacing: 0.02em;
   flex-shrink: 0;
+  transition: color 0.3s ease;
 }
 
 .header__icono {
@@ -159,6 +177,48 @@ onMounted(() => {
 
 .nav__item:not(.nav__item--activo):hover .nav__label {
   color: #6c533d;
+}
+
+/* Toggle */
+.toggle__tema {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.toggle__pista {
+  display: flex;
+  align-items: center;
+  width: 52px;
+  height: 28px;
+  border-radius: 999px;
+  border: 2px solid rgba(71, 16, 16, 0.2);
+  background-color: #f8f5f2;
+  padding: 3px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.toggle__pista--oscuro {
+  background-color: #2a2420;
+  border-color: rgba(232, 224, 216, 0.2);
+}
+
+.toggle__circulo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e0dcd8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.5, 0, 0.5, 1), background-color 0.3s ease;
+}
+
+.toggle__circulo--oscuro {
+  transform: translateX(24px);
+  background-color: #6c533d;
 }
 
 /* Tablet */

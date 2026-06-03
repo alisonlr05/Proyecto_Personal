@@ -17,5 +17,19 @@
   { "nombre": "HTML5",      "categoria": "Desarrollo web" },
   { "nombre": "CSS3",       "categoria": "Desarrollo web" },
   { "nombre": "GitHub",     "categoria": "Herramientas" }
-]
+],
+
+"proyectos": [
+  {
+    "nombre": "Gestor de Tareas",
+    "descripcion": "Sistema web para registrar, eliminar y marcar tareas como realizadas. Incluye memoria caché para persistir la lista de tareas entre sesiones y un contador de tareas activas.",
+    "link": "https://alisonlr05.github.io/Laboratorio6/"
+  }
+],
+"contacto": {
+  "correo": "alisonlr2710@gmail.com",
+  "telefono": "6006 7190",
+  "linkedin": "https://www.linkedin.com/in/alison-lopez-reyes-4a325a346",
+  "github": "https://github.com/alison05"
+}
 }
