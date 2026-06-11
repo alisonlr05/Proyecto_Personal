@@ -306,7 +306,6 @@ body.tema-oscuro .deco--cpu {
 }
 
 @media (max-width: 480px) {
-  .deco { display: none; }
   .hero__botones { flex-direction: column; width: 100%; }
   .btn { text-align: center; }
 }
