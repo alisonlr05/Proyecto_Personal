@@ -1,10 +1,16 @@
 <script setup>
+import { ref } from 'vue'
+import { Headphones, Video } from 'lucide-vue-next'
+
 defineProps({
   descripcion: String,
-  foto:        String,
-  audio:       String,
-  video:       String,
+  foto: String,
+  audio: String,
+  video: String,
 })
+
+const audioReproduciendo = ref(false)
+const videoReproduciendo = ref(false)
 </script>
 
 <template>
@@ -22,21 +28,35 @@ defineProps({
       <div class="about__contenido">
 
         <!-- DESCRIPCIÓN -->
-        <p class="about__descripcion">{{ descripcion }}</p>
+        <div class="about__descripcion">
+  <p
+    v-for="(parrafo, i) in descripcion.split('|')"
+    :key="i"
+  >{{ parrafo }}</p>
+</div>
 
         <!-- AUDIO -->
-        <p class="about__media-label">🎧 Audio de presentación</p>
-        <audio controls :src="audio" class="about__audio">
+        <div class="about__media-label">
+          <Headphones :size="21" :class="{ 'icono--bailando': audioReproduciendo }" />
+          <span>Audio de presentación</span>
+        </div>
+        <audio controls :src="audio" class="about__audio" @play="audioReproduciendo = true"
+          @pause="audioReproduciendo = false" @ended="audioReproduciendo = false">
           Tu navegador no soporta audio.
         </audio>
 
         <!-- VIDEO -->
-        <p class="about__media-label">🎬 Video de presentación</p>
-        <video controls :src="video" class="about__video">
+        <div class="about__media-label">
+          <Video :size="23" :class="{ 'icono--bailando': videoReproduciendo }" />
+          <span>Video de presentación</span>
+        </div>
+        <video controls :src="video" class="about__video" @play="videoReproduciendo = true"
+          @pause="videoReproduciendo = false" @ended="videoReproduciendo = false">
           Tu navegador no soporta video.
         </video>
-
+      
       </div>
+
     </div>
   </section>
 </template>
@@ -47,6 +67,7 @@ defineProps({
 }
 
 .about__titulo {
+  font-family: 'Playfair Display', serif;
   font-size: 2.2rem;
   color: #471010;
   font-weight: 700;
@@ -72,10 +93,10 @@ defineProps({
 /* FOTO */
 .about__foto-wrap {
   flex-shrink: 0;
-  width: 200px;
-  height: 200px;
+  width: 270px;
+  height: 270px;
   border-radius: 50%;
-  border: 2px dashed #a1b5a1;
+  border: 3px dashed #a1b5a1;
   padding: 6px;
 }
 
@@ -88,11 +109,10 @@ defineProps({
 }
 
 /* CONTENIDO */
-.about__contenido {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.about__descripcion p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 
 .about__descripcion {
@@ -102,10 +122,14 @@ defineProps({
 }
 
 .about__media-label {
-  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
   color: #6c533d;
-  font-weight: 500;
-  margin-bottom: 0.2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .about__audio {
@@ -119,6 +143,35 @@ defineProps({
   background-color: #1a1a1a;
 }
 
+/* Modo oscuro */
+body.tema-oscuro .about__titulo {
+  color: #e8e0d8;
+}
+
+body.tema-oscuro .about__linea {
+  background-color: #496f49;
+}
+
+body.tema-oscuro .about__foto-wrap {
+  border-color: #7a9e7a;
+}
+
+body.tema-oscuro .about__foto {
+  background-color: #2a2420;
+}
+
+body.tema-oscuro .about__descripcion {
+  color: #e8e0d8;
+}
+
+body.tema-oscuro .about__media-label {
+  color: #a1856a;
+}
+
+body.tema-oscuro .about__audio {
+  accent-color: #a1856a;
+}
+
 /* MÓVIL */
 @media (max-width: 768px) {
   .about { padding: 4rem 1.5rem; }
@@ -127,5 +180,15 @@ defineProps({
     flex-direction: column;
     align-items: center;
   }
+}
+
+/* animacion para iconos */
+.icono--bailando {
+  animation: saltar 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes saltar {
+  0%   { transform: translateY(0px);  }
+  100% { transform: translateY(-4px); }
 }
 </style>

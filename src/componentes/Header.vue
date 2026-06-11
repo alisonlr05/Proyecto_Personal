@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
-import { Sun, Moon } from 'lucide-vue-next'
+import { Sun, Moon, Cpu } from 'lucide-vue-next'
 
 const props = defineProps({
   nombre:     String,
@@ -71,9 +71,9 @@ onMounted(() => {
 <template>
   <header class="header">
     <div class="header__logo">
-      <span class="header__icono">✦</span>
-      <span>Portfolio Personal</span>
-    </div>
+  <Cpu :size="18" color="#6c533d" />
+  <span>Portfolio Personal</span>
+</div>
 
     <nav class="header__nav">
       <span class="nav__burbuja" ref="burbujaEl"></span>
@@ -240,5 +240,36 @@ onMounted(() => {
     padding: 0.35rem 0.5rem;
     font-size: 0.75rem;
   }
+}
+
+/* Modo oscuro */
+body.tema-oscuro .header {
+  background-color: #120f0d;
+  border-bottom-color: rgba(232, 224, 216, 0.08);
+}
+
+body.tema-oscuro .header__logo {
+  color: #e8e0d8;
+}
+
+body.tema-oscuro .header__icono {
+  color: #a1856a;
+}
+
+body.tema-oscuro .nav__item {
+  color: #e8e0d8;
+}
+
+body.tema-oscuro .nav__item:not(.nav__item--activo):hover .nav__label {
+  color: #a1856a;
+}
+
+body.tema-oscuro .nav__burbuja {
+  background-color: #a1856a;
+}
+
+body.tema-oscuro .toggle__pista {
+  background-color: #2a2420;
+  border-color: rgba(232, 224, 216, 0.2);
 }
 </style>

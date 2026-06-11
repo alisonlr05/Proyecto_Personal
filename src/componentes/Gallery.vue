@@ -43,6 +43,7 @@ defineProps({
 }
 
 .proyectos__titulo {
+  font-family: 'Playfair Display', serif;
   font-size: 2.2rem;
   color: #471010;
   font-weight: 700;
@@ -99,6 +100,7 @@ defineProps({
 }
 
 .card__nombre {
+  font-family: 'Jost', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
   color: #f8f5f2;
@@ -153,5 +155,14 @@ defineProps({
 
 .card:hover .card__lado--reverso {
   transform: rotateY(0);
+}
+
+/* Modo oscuro */
+body.tema-oscuro .proyectos__titulo {
+  color: #e8e0d8;
+}
+
+body.tema-oscuro .proyectos__linea {
+  background-color: #496f49;
 }
 </style>

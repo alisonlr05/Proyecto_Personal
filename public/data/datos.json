@@ -3,20 +3,30 @@
     "nombreCompleto": "Alison Sofía López Reyes",
     "titulo": "Estudiante de Informática Empresarial",
     "universidad": "Universidad de Costa Rica",
-    "descripcion": "Estudiante de cuarto año de Informática Empresarial en la Universidad de Costa Rica.",
+    "descripcion": "Hola, soy Alison, estudiante de cuarto año de Informática Empresarial en la Universidad de Costa Rica (UCR), con un creciente interés por el desarrollo web y la creación de aplicaciones útiles para las personas.|A lo largo de mi formación académica he participado en diversos proyectos que me han permitido fortalecer habilidades técnicas y desarrollar competencias como el trabajo en equipo, la comunicación efectiva, la adaptación al cambio y el aprendizaje continuo. Estas experiencias me han enseñado que cada desafío representa una oportunidad para crecer y encontrar nuevas formas de resolver problemas.|Soy una persona curiosa, responsable y con muchas ganas de seguir creciendo en el mundo del desarrollo de software. Disfruto enfrentar retos, aprender de cada experiencia y buscar soluciones creativas que combinen funcionalidad y una buena experiencia de usuario.|Estoy emocionada por seguir explorando el campo del desarrollo web y contribuir con mis habilidades para crear proyectos que tengan un impacto positivo en la vida de las personas.",
     "foto": "/imagenes/perfil.jpg",
     "audio": "/audio/presentacion.mp3",
     "video": "/video/intro.mp4"
   },
 
   "habilidades": [
-  { "nombre": "Java",       "categoria": "Lenguajes de programación" },
-  { "nombre": "PHP",        "categoria": "Lenguajes de programación" },
-  { "nombre": "C#",         "categoria": "Lenguajes de programación" },
-  { "nombre": "JavaScript", "categoria": "Lenguajes de programación" },
-  { "nombre": "HTML5",      "categoria": "Desarrollo web" },
-  { "nombre": "CSS3",       "categoria": "Desarrollo web" },
-  { "nombre": "GitHub",     "categoria": "Herramientas" }
+  { "nombre": "Java",        "categoria": "Lenguajes de programación" },
+  { "nombre": "PHP",         "categoria": "Lenguajes de programación" },
+  { "nombre": "C#",          "categoria": "Lenguajes de programación" },
+  { "nombre": "JavaScript",  "categoria": "Lenguajes de programación" },
+  { "nombre": "HTML5",       "categoria": "Desarrollo web" },
+  { "nombre": "CSS3",        "categoria": "Desarrollo web" },
+  { "nombre": "Vue.js",      "categoria": "Desarrollo web" },
+  { "nombre": "Node.js",     "categoria": "Desarrollo web" },
+  { "nombre": "Laravel",     "categoria": "Frameworks" },
+  { "nombre": "ASP.NET",     "categoria": "Frameworks" },
+  { "nombre": "MySQL",       "categoria": "Bases de datos" },
+  { "nombre": "SQLite",      "categoria": "Bases de datos" },
+  { "nombre": "Git",         "categoria": "Control de versiones" },
+  { "nombre": "GitHub",      "categoria": "Control de versiones" },
+  { "nombre": "Docker",      "categoria": "Infraestructura" },
+  { "nombre": "Máquinas Virtuales", "categoria": "Infraestructura" },
+  { "nombre": "Redes",       "categoria": "Infraestructura" }
 ],
 
 "proyectos": [
@@ -30,6 +40,6 @@
   "correo": "alisonlr2710@gmail.com",
   "telefono": "6006 7190",
   "linkedin": "https://www.linkedin.com/in/alison-lopez-reyes-4a325a346",
-  "github": "https://github.com/alison05"
+  "github": "https://github.com/alisonlr05"
 }
 }
