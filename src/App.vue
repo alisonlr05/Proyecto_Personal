@@ -12,7 +12,7 @@ const cargando   = ref(true)
 const temaOscuro = ref(false)
 
 onMounted(async () => {
-  const respuesta = await fetch('/data/datos.json')
+  const respuesta = await fetch('/Proyecto_Personal/data/datos.json')
   datos.value     = await respuesta.json()
   cargando.value  = false
 })
