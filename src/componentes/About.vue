@@ -22,7 +22,8 @@ const videoReproduciendo = ref(false)
 
       <!-- FOTO -->
       <div class="about__foto-wrap">
-        <img :src="foto" alt="Foto de perfil" class="about__foto" />
+        <img :src="foto" alt="Foto de perfil de Alison López"
+     class="about__foto" loading="lazy" decoding="async" />
       </div>
 
       <div class="about__contenido">
@@ -50,8 +51,12 @@ const videoReproduciendo = ref(false)
           <Video :size="23" :class="{ 'icono--bailando': videoReproduciendo }" />
           <span>Video de presentación</span>
         </div>
-        <video controls :src="video" class="about__video" @play="videoReproduciendo = true"
-          @pause="videoReproduciendo = false" @ended="videoReproduciendo = false">
+        <video controls preload="metadata" class="about__video"
+          @play="videoReproduciendo = true"
+          @pause="videoReproduciendo = false"
+          @ended="videoReproduciendo = false">
+          <source :src="video.replace('.mp4', '.webm')" type="video/webm" />
+          <source :src="video" type="video/mp4" />
           Tu navegador no soporta video.
         </video>
       

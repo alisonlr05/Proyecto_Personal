@@ -78,16 +78,17 @@ onMounted(() => {
     <nav class="header__nav">
       <span class="nav__burbuja" ref="burbujaEl"></span>
 
-      <button
+      <a
         v-for="(s, i) in secciones"
         :key="s.id"
+        :href="`#${s.id}`"
         :ref="el => itemsEl[i] = el"
         class="nav__item"
         :class="{ 'nav__item--activo': activo === s.id }"
-        @click="navegar(s.id, i)"
+        @click.prevent="navegar(s.id, i)"
       >
         <span class="nav__label">{{ s.label }}</span>
-      </button>
+      </a>
     </nav>
 
     <!-- Toggle tema -->
@@ -158,6 +159,7 @@ onMounted(() => {
   background: none;
   border: none;
   cursor: pointer;
+  text-decoration: none;
   padding: 0.4rem 0.8rem;
   border-radius: 999px;
   font-family: inherit;

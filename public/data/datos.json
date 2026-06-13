@@ -33,7 +33,18 @@
   {
     "nombre": "Gestor de Tareas",
     "descripcion": "Sistema web para registrar, eliminar y marcar tareas como realizadas. Incluye memoria caché para persistir la lista de tareas entre sesiones y un contador de tareas activas.",
-    "link": "https://alisonlr05.github.io/Laboratorio6/"
+    "imagen": "./imagenes/gestor-tareas.png",
+    "tecnologias": ["HTML5", "CSS3", "JavaScript"],
+    "repositorio": "https://github.com/alisonlr05/Laboratorio6",
+    "despliegue": "https://alisonlr05.github.io/Laboratorio6/"
+  },
+  {
+    "nombre": "Bodyweight Training",
+    "descripcion": "Aplicación para planificar y seguir rutinas de entrenamiento con peso corporal, sin necesidad de equipamiento.",
+    "imagen": "./imagenes/proyectos/bodyweight.png",
+    "tecnologias": ["Java", "SQLite"],
+    "repositorio": "https://github.com/alisonlr05/PENDIENTE",
+    "video": "https://www.youtube.com/PENDIENTE"
   }
 ],
 "contacto": {
