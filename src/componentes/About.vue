@@ -110,6 +110,7 @@ const videoReproduciendo = ref(false)
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 40%;
   background-color: #e8e2dc;
 }
 
