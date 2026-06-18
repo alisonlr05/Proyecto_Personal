@@ -117,7 +117,7 @@ defineProps({
   background-color: #ffffff;
   border: 1px solid rgb(71 16 16 / 0.08);
   border-radius: 16px;
-  width: 300px;
+  width: 450px;
   overflow: hidden;
   text-align: left;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
