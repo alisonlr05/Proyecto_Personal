@@ -39,12 +39,12 @@
     "despliegue": "https://naillel.github.io/proyecto-guia-turistica-vite/"
   },
   {
-    "nombre": "Bodyweight",
+    "nombre": "BovWeight",
     "descripcion": "Sistema de estimación de peso de ganado bovino a partir de fotografías tomadas desde el teléfono. Cuenta con una API REST en Laravel con base de datos MySQL, una aplicación móvil en Ionic y Vue 3 para usuarios con distintos roles (ganadero, veterinario y asistente), un panel web en Vue para la administración, y un microservicio en Python que estima el peso del animal. Incluye historial de pesajes y gestión de fincas.",
     "imagen": "./imagenes/Proyecto-bodyweight.JPG",
     "tecnologias": ["Laravel", "PHP", "Vue", "Ionic", "MySQL", "Python"],
-    "repositorio": "./video/demo-bovweight.mp4",
-    "video": "https://www.youtube.com/PENDIENTE"
+    "repositorio": "https://github.com/Cavalari2599/BovweightMovil",
+    "video": "./video/demo-bovweight.mp4"
   }
 ],
 "contacto": {
