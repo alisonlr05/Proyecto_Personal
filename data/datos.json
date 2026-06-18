@@ -31,19 +31,19 @@
 
 "proyectos": [
   {
-    "nombre": "Gestor de Tareas",
-    "descripcion": "Sistema web para registrar, eliminar y marcar tareas como realizadas. Incluye memoria caché para persistir la lista de tareas entre sesiones y un contador de tareas activas.",
-    "imagen": "./imagenes/gestor-tareas.png",
-    "tecnologias": ["HTML5", "CSS3", "JavaScript"],
-    "repositorio": "https://github.com/alisonlr05/Laboratorio6",
-    "despliegue": "https://alisonlr05.github.io/Laboratorio6/"
+    "nombre": "Guía Turística de Costa Rica",
+    "descripcion": "Aplicación web multimedia que explora destinos turísticos de Costa Rica con tarjetas, galerías de imágenes y audioguías. Construida con Web Components nativos (Custom Elements, Shadow DOM y ES Modules), carga los datos de los destinos dinámicamente desde un archivo JSON con fetch().",
+    "imagen": "./imagenes/Proyecto-guia-turistica.png",
+    "tecnologias": ["HTML5", "CSS3", "JavaScript", "Web Components", "Vite"],
+    "repositorio": "https://github.com/Naillel/proyecto-guia-turistica-vite",
+    "despliegue": "https://naillel.github.io/proyecto-guia-turistica-vite/"
   },
   {
-    "nombre": "Bodyweight Training",
-    "descripcion": "Aplicación para planificar y seguir rutinas de entrenamiento con peso corporal, sin necesidad de equipamiento.",
-    "imagen": "./imagenes/proyectos/bodyweight.png",
-    "tecnologias": ["Java", "SQLite"],
-    "repositorio": "https://github.com/alisonlr05/PENDIENTE",
+    "nombre": "Bodyweight",
+    "descripcion": "Sistema de estimación de peso de ganado bovino a partir de fotografías tomadas desde el teléfono. Cuenta con una API REST en Laravel con base de datos MySQL, una aplicación móvil en Ionic y Vue 3 para usuarios con distintos roles (ganadero, veterinario y asistente), un panel web en Vue para la administración, y un microservicio en Python que estima el peso del animal. Incluye historial de pesajes y gestión de fincas.",
+    "imagen": "./imagenes/Proyecto-bodyweight.JPG",
+    "tecnologias": ["Laravel", "PHP", "Vue", "Ionic", "MySQL", "Python"],
+    "repositorio": "./video/demo-bovweight.mp4",
     "video": "https://www.youtube.com/PENDIENTE"
   }
 ],
